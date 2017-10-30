@@ -20,6 +20,11 @@ int main()
 	
 	j = strlen(mass);  //j = длина введенной строки
 	
+	if(isalpha(mass[0])){
+	}else{
+		return 0;
+	}
+	
 	for(i = 0; i < j; i++){	
 		if(mass[i] != mass[j - 1]){
 			f = 1;
