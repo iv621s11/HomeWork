@@ -4,31 +4,24 @@
 
 int main()
 {
-	char mass[30];
+	char mass[30] = {0};
 	char ch;
 	
-	int i, j,f = 0;
+	int i, j, f = 0;
 	
-	while((ch = getchar()) != EOF){
-		mass[i] = ch;
-		i++;
+	i = 0;
+	
+	while((ch = getchar()) != '\n'){  //Считывание сстроки до нажатия Enter
+		if(isalpha(ch)){
+			mass[i] = tolower(ch);
+			i++;
+		}
 	}
 	
-	j = strlen(mass);
-	printf("j = %d\n", j);
-
-	for(i = 0; i < 30; i++){
-		printf("%c  ", mass[i]);
-	}
+	j = strlen(mass);  //j = длина введенной строки
 	
-	printf("\n\n");
-
-	for(i = 0; i < j; i++){
-		printf("%c  ", mass[i]);
-	}
-	//
 	for(i = 0; i < j; i++){	
-		if(mass[i] != mass[j - 2]){
+		if(mass[i] != mass[j - 1]){
 			f = 1;
 			printf("Эта фраза не палиндром\n");
 			break;
