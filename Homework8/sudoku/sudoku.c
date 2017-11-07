@@ -5,7 +5,7 @@ int main()
 		
 	
 	int i, n, j;
-	int m, n;
+	int m, k;
 	FILE *file;
 	
 	int one = 0, two = 0, three = 0, four = 0, five = 0, six = 0;
@@ -73,8 +73,7 @@ int main()
 				break;
 			}
 		}
-		if(one =! 1 || two =! 1 || three =! 1 || four =! 1 || five =! 1 
-		|| six =! 1 || seven =! 1 || eight =! 1 || nine =! 1){
+		if((one =! 1) || (two =! 1) || (three =! 1) || (four =! 1) || (five =! 1) || (six =! 1) || (seven =! 1) || (eight =! 1) || (nine =! 1)){
 			printf("incorrect\n");
 			return 0;
 		}
@@ -129,8 +128,7 @@ int main()
 				break;
 			}
 		}
-		if(one =! 1 || two =! 1 || three =! 1 || four =! 1 || five =! 1 
-		|| six =! 1 || seven =! 1 || eight =! 1 || nine =! 1){
+if((one =! 1) || (two =! 1) || (three =! 1) || (four =! 1) || (five =! 1) || (six =! 1) || (seven =! 1) || (eight =! 1) || (nine =! 1)){
 			printf("incorrect\n");
 			return 0;
 		}
@@ -144,7 +142,64 @@ int main()
 		eight = 0;
 		nine = 0;
 	}
-	
-	
+	for(m = 1; m < n + 1; m++){
+		for(k = 1; k < n + 1; k++){
+			one = 0;
+			two = 0;
+			three = 0;
+			four = 0;
+			five = 0;
+			six = 0;
+			seven = 0;
+			eight = 0;
+			nine = 0;
+			for(i = 0; i < n; i++){
+				for(j = 0; j < n; j++){
+					switch(sud[m * i][k * j]){
+						case (1):
+						one++;
+						break;
+			
+						case (2):
+						two++;
+						break;
+			
+						case (3):
+						three++;
+						break;
+			
+						case (4):
+						four++;
+						break;
+			
+						case (5):
+						five++;
+						break;
+			
+						case (6):
+						six++;
+						break;
+				
+						case (7):
+						seven++;
+						break;
+				
+						case (8):
+						eight++;
+						break;
+				
+						case (9):
+						nine++;
+						break;
+					}
+				}
+			}
+			if((one =! 1) || (two =! 1) || (three =! 1) || (four =! 1) || (five =! 1) || (six =! 1) || (seven =! 1) || (eight =! 1) || (nine =! 1)){
+			printf("incorrect\n");
+			return 0;
+			}
+		}
+	}
+	printf("all good\n");
 	return 0;
 }
